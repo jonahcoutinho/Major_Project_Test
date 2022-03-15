@@ -47,7 +47,7 @@ grid.best_params_
 
 """YES it takes Time!!"""
 '''
-model=RandomForestClassifier(bootstrap=False,criterion='gini',n_estimators=200,max_depth=40)
+model=RandomForestClassifier(bootstrap=False,criterion='gini',n_estimators=20,max_depth=10)
 model.fit(xtrain,ytrain)
 
 '''pred=model.predict(xtest)
