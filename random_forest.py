@@ -23,15 +23,15 @@ from sklearn.datasets import load_digits
 
 digits=load_digits()
 
-plt.gray()
+'''plt.gray()
 for i in range(5):
   plt.matshow(digits.images[i])
 
 dir(digits)
-
+'''
 df=pd.DataFrame(digits.data)
 df['target']=digits.target
-df
+#df
 
 xtrain,xtest,ytrain,ytest=train_test_split(df.drop('target',axis='columns'),df.target,test_size=0.2)
 
@@ -50,12 +50,12 @@ grid.best_params_
 model=RandomForestClassifier(bootstrap=False,criterion='gini',n_estimators=200,max_depth=40)
 model.fit(xtrain,ytrain)
 
-pred=model.predict(xtest)
+'''pred=model.predict(xtest)
 cm=confusion_matrix(pred,ytest)
 
 import seaborn as sns
 plt.figure(figsize=(10,10))
 sns.heatmap(cm,annot=True)
-
+'''
 model.score(xtest,ytest)
 
