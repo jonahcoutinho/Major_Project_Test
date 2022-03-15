@@ -59,3 +59,5 @@ sns.heatmap(cm,annot=True)
 '''
 model.score(xtest,ytest)
 
+
+
