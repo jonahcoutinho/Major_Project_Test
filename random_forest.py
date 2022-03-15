@@ -35,7 +35,7 @@ df
 
 xtrain,xtest,ytrain,ytest=train_test_split(df.drop('target',axis='columns'),df.target,test_size=0.2)
 
-from sklearn.model_selection import GridSearchCV
+'''from sklearn.model_selection import GridSearchCV
 model=RandomForestClassifier()
 param={'bootstrap': [True, False],
  'max_depth': [10, 20, 30, 40, 50, None],
@@ -46,7 +46,7 @@ grid.fit(xtrain,ytrain)
 grid.best_params_
 
 """YES it takes Time!!"""
-
+'''
 model=RandomForestClassifier(bootstrap=False,criterion='gini',n_estimators=200,max_depth=40)
 model.fit(xtrain,ytrain)
 
