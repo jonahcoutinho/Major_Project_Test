@@ -57,7 +57,7 @@ import seaborn as sns
 plt.figure(figsize=(10,10))
 sns.heatmap(cm,annot=True)
 '''
-model.score(xtest,ytest)
+print(model.score(xtest,ytest))
 
 
 
